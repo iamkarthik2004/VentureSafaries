@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venture Safaries — Luxury Travels & Premium Adventures</title>
+
+  <!-- Meta tags for SEO -->
+  <meta name="description"
+    content="Embark on extraordinary travel experiences. Luxury safaris, mountain treks, beach retreats, and customized cultural tours by Venture Safaries.">
+  <meta name="keywords"
+    content="luxury safari, travel agency, adventure tours, customized holidays, venture safaries, premium travel">
+
+  <!-- FontAwesome Icon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header id="main-header">
+    <div class="nav-container">
+      <a href="#hero" class="logo" id="site-logo">
+        <!-- Dynanically populated by script.js -->
+        <span>Venture</span>Safaries
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+          <li><a href="#booking" class="nav-link">Book Now</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <a href="admin.html" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;"><i
+            class="fa-solid fa-lock" style="margin-right: 0.5rem;"></i>Admin</a>
+        <a href="#booking" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Enquire Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <!-- Cinematic Travel Memory Collage Background -->
+    <div class="hero-collage-bg">
+      <div class="collage-item collage-img-1" style="background-image: url('image1.jpeg');"></div>
+      <div class="collage-item collage-img-2" style="background-image: url('image2.jpeg');"></div>
+    </div>
+
+    <!-- Premium Overlay Filters -->
+    <div class="hero-dark-overlay"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-bottom-fade"></div>
+
+    <!-- Smooth Floating Particles and Light Flares -->
+    <div class="hero-particles">
+      <div class="particle p-1"></div>
+      <div class="particle p-2"></div>
+      <div class="particle p-3"></div>
+      <div class="particle p-4"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-glass-badge" id="hero-mini-title-badge">
+        <i class="fa-solid fa-compass" style="color: var(--accent-gold); margin-right: 0.5rem; font-size: 0.8rem;"></i>
+        <span id="hero-mini-title">Bespoke Travel Experiences</span>
+      </div>
+      <h1 id="hero-title" class="gold-gradient-text">Discover the World's Breathtaking Spots</h1>
+      <p id="hero-desc">Luxury adventures crafted for the extraordinary traveler. Experience the untamed beauty of
+        nature with Venture Safaries.</p>
+      <div class="hero-btns">
+        <a href="#packages" class="btn btn-primary" id="hero-cta-btn">Explore Packages</a>
+        <a href="#booking" class="btn btn-outline btn-glass">Plan Your Journey</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section-padding" id="about">
+    <div class="about-grid">
+      <div class="about-img-container">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80" alt="About Venture Safaries"
+          class="about-img" id="about-img">
+        <div class="about-img-border"></div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-subtitle">Exquisite Journeys</span>
+        <h2 id="about-title" class="gold-gradient-text">Your Journey, Our Passion</h2>
+        <div id="about-text-container">
+          <p>For over a decade, Venture Safaries has been crafting extraordinary travel experiences that blend luxury
+            with authentic adventure. From the sweeping savannahs of Africa to the misty mountains of Southeast Asia, we
+            transform dreams into unforgettable journeys.</p>
+          <p>Our expert guides, hand-picked accommodations, and meticulously planned itineraries ensure every moment
+            exceeds expectations.</p>
+        </div>
+        <a href="#booking" class="btn btn-primary" style="margin-top: 1.5rem;">Begin Planning</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS COUNTING SECTION -->
+  <section class="stats-section">
+    <div class="section-padding stats-grid" id="stats-container">
+      <!-- Dynamically populated stats -->
+    </div>
+  </section>
+
+  <!-- POPULAR PACKAGES SECTION -->
+  <section class="section-padding" id="packages">
+    <div class="text-center">
+      <span class="section-subtitle">Handpicked Adventures</span>
+      <h2 class="section-title gold-gradient-text">Featured Travel Packages</h2>
+      <p class="section-desc">Explore our top-tier curated travel packages built to deliver extreme comfort and lifetime
+        memories.</p>
+    </div>
+
+    <!-- Category filter tabs -->
+    <div class="filters-container" id="packages-filters">
+      <button class="filter-btn active" data-filter="all">All Packages</button>
+      <button class="filter-btn" data-filter="featured">Featured Only</button>
+      <button class="filter-btn" data-filter="short">Short (1-7 Days)</button>
+      <button class="filter-btn" data-filter="long">Long (8+ Days)</button>
+    </div>
+
+    <!-- Packages Grid -->
+    <div class="grid-layout" id="packages-grid">
+      <!-- Dynamically populated cards -->
+    </div>
+  </section>
+
+  <!-- DESTINATIONS SECTION -->
+  <section class="section-padding" id="destinations"
+    style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="text-center">
+      <span class="section-subtitle">Uncharted Territories</span>
+      <h2 class="section-title gold-gradient-text">Top Destinations</h2>
+      <p class="section-desc">Get inspired by some of our favorite destinations. Our experts will handle every detail of
+        your visit.</p>
+    </div>
+
+    <div class="destinations-grid" id="destinations-grid">
+      <!-- Dynamically populated destinations -->
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION BANNER -->
+  <section class="cta-banner" id="cta-banner"
+    style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80');">
+    <div class="cta-content">
+      <h2 id="cta-title">Ready for Your Next Adventure?</h2>
+      <p id="cta-desc">Let us help you design your next luxurious getaway. Contact our expert curators today.</p>
+      <a href="#booking" class="btn btn-primary" id="cta-button-text">Start Customizing</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / REVIEWS SECTION -->
+  <section class="section-padding reviews-section" id="reviews">
+    <div class="text-center">
+      <span class="section-subtitle">Shared Memoirs</span>
+      <h2 class="section-title gold-gradient-text">Voices of Our Travelers</h2>
+      <p class="section-desc">Read inspiring tales from couples, families, and individuals who chose Venture Safaries
+        for their lifetime retreats.</p>
+    </div>
+
+    <div class="reviews-container" id="reviews-container">
+      <!-- Dynamically populated reviews -->
+    </div>
+  </section>
+
+  <!-- MEDIA GALLERY SECTION -->
+  <section class="section-padding" id="gallery">
+    <div class="text-center">
+      <span class="section-subtitle">Visual Inspirations</span>
+      <h2 class="section-title gold-gradient-text">Our Adventure Gallery</h2>
+      <p class="section-desc">A snapshot of the beautiful wildlife, exotic structures, and golden landscapes our
+        travelers captured.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Dynamically populated image gallery -->
+    </div>
+  </section>
+
+  <!-- BOOKING / REQUEST SECTION -->
+  <section class="section-padding booking-section" id="booking"
+    style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80');">
+    <div class="booking-grid">
+      <div class="booking-info">
+        <span class="section-subtitle">Reservations</span>
+        <h2 class="gold-gradient-text">Let's Craft Your Dream Journey</h2>
+        <p>Send us your specifications, package choices, or custom ideas. A luxury travel consultant will respond within
+          24 hours to begin mapping out your next tailored excursion.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-text">
+              <h4>Direct Call</h4>
+              <p id="contact-phone">+1 (555) 987-6543</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-text">
+              <h4>Email Inquiries</h4>
+              <p id="contact-email">hello@venturesafaries.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-text">
+              <h4>Headquarters</h4>
+              <p id="contact-address">42 Explorer Avenue, Adventure City, AC 10001</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form-wrapper">
+        <form class="booking-form" id="booking-form" novalidate>
+          <h3 class="gold-gradient-text" style="margin-bottom: 2rem;">Booking Inquiry</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-name">Full Name *</label>
+              <input type="text" id="booking-name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-phone">Phone Number *</label>
+              <input type="tel" id="booking-phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-email">Email Address *</label>
+              <input type="email" id="booking-email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-package">Select Package *</label>
+              <select id="booking-package" class="form-control" required>
+                <option value="" disabled selected>Choose a package</option>
+                <!-- Dynamically populated options -->
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-date">Preferred Travel Date *</label>
+              <input type="date" id="booking-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-travelers">Number of Travelers *</label>
+              <input type="number" id="booking-travelers" class="form-control" min="1" max="100" value="1" required>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label for="booking-message">Special Notes / Custom Requests</label>
+            <textarea id="booking-message" class="form-control" rows="4"
+              placeholder="Any dietary restrictions, physical requirements, or custom itineraries you would like..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Reservation Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQS ACCORDION SECTION -->
+  <section class="section-padding faq-section" id="faqs">
+    <div class="text-center">
+      <span class="section-subtitle">Clarifications</span>
+      <h2 class="section-title gold-gradient-text">Frequently Asked Questions</h2>
+      <p class="section-desc">Have questions about visa details, insurance coverage, packing guides, or customization?
+        Find quick answers here.</p>
+    </div>
+
+    <div class="faq-list" id="faq-list">
+      <!-- Dynamically populated accordions -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col footer-logo-desc">
+        <a href="#hero" class="logo" id="footer-logo">
+          <span>Venture</span>Safaries
+        </a>
+        <p id="footer-desc">Crafting high-end bespoke adventures and unforgettable retreats for families, couples, and
+          absolute explorers since 2014.</p>
+
+        <div class="social-links" id="footer-socials">
+          <!-- Dynamically populated socials -->
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Navigations</h3>
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About Us</a></li>
+          <li><a href="#packages" class="footer-link">Travel Packages</a></li>
+          <li><a href="#destinations" class="footer-link">Top Destinations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Memoirs</h3>
+        <ul class="footer-links">
+          <li><a href="#gallery" class="footer-link">Photo Gallery</a></li>
+          <li><a href="#reviews" class="footer-link">Travel Reviews</a></li>
+          <li><a href="#faqs" class="footer-link">General FAQs</a></li>
+          <li><a href="admin.html" class="footer-link"><i class="fa-solid fa-lock"
+                style="margin-right: 0.5rem; font-size: 0.8rem;"></i>Staff Access</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p style="font-size: 0.85rem; margin-bottom: 1.5rem;">Subscribe to receive exclusive off-market itinerary guides
+          and luxury retreats offers.</p>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="email" class="form-control" placeholder="Enter your email"
+            style="background: var(--bg-secondary); border: 1px solid var(--border-light); padding: 0.6rem 1rem; border-radius: 4px; outline: none; color: #fff; width: 100%;">
+          <button class="btn btn-primary" style="padding: 0.6rem 1.2rem;"><i
+              class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p id="footer-copyright">&copy; 2026 Venture Safaries. All rights reserved. Created with absolute luxury.</p>
+      <p style="display: flex; gap: 1.5rem;">
+        <a href="#" class="footer-link" style="font-size: 0.8rem;">Terms of Service</a>
+        <a href="#" class="footer-link" style="font-size: 0.8rem;">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC MODAL (DETAILED ITINERARIES, FACILITIES, AND BOOKING OPTIONS) -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-container">
+      <div class="modal-header" id="modal-header-img" style="background-image: url('');">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <span class="modal-subtitle" id="modal-subtitle">Subitle details</span>
+        <h2 class="modal-title gold-gradient-text" id="modal-title">Package or Destination Title</h2>
+
+        <div class="modal-meta-grid" id="modal-meta-grid">
+          <!-- Dynamic details like price and duration -->
+        </div>
+
+        <p class="modal-desc" id="modal-description">Full package long description details.</p>
+
+        <div class="modal-tabs">
+          <button class="modal-tab-btn active" data-tab="tab-itinerary" id="tab-btn-itinerary">Itinerary Plan</button>
+          <button class="modal-tab-btn" data-tab="tab-facilities" id="tab-btn-facilities">Inclusions & Perks</button>
+          <button class="modal-tab-btn" data-tab="tab-photos" id="tab-btn-photos">Media Gallery</button>
+        </div>
+
+        <!-- Itinerary Tab -->
+        <div class="modal-tab-content active" id="tab-itinerary">
+          <ul class="itinerary-list" id="modal-itinerary-list">
+            <!-- Dynamically populated days -->
+          </ul>
+        </div>
+
+        <!-- Inclusions Tab -->
+        <div class="modal-tab-content" id="tab-facilities">
+          <div class="facilities-grid" id="modal-facilities-grid">
+            <!-- Dynamically populated highlights / facilities -->
+          </div>
+        </div>
+
+        <!-- Photos Tab -->
+        <div class="modal-tab-content" id="tab-photos">
+          <div class="modal-gallery" id="modal-photos-grid">
+            <!-- Dynamically populated category gallery -->
+          </div>
+        </div>
+
+        <div style="margin-top: 3.5rem; text-align: center;">
+          <a href="#booking" class="btn btn-primary" id="modal-enquiry-cta" style="padding: 1rem 3rem;">Enquire About
+            This Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Shared Data service layer -->
+  <script src="data.js"></script>
+  <!-- Public Script implementation -->
+  <script src="script.js"></script>
+</body>
+
+</html>
