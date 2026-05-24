@@ -111,12 +111,22 @@ function renderNavbar() {
   const settings = DataService.get('vs_settings');
   if (settings && settings.siteName) {
     const logoEl = document.getElementById('site-logo');
+    const footerLogoEl = document.getElementById('footer-logo');
+    
+    const logoImgHtml = settings.logo 
+      ? `<img src="${settings.logo}" alt="Emblem" class="logo-icon-img" style="height: 38px; margin-right: 0.6rem; border-radius: 50%; filter: drop-shadow(0 0 5px rgba(226, 183, 85, 0.4)); vertical-align: middle;">`
+      : '';
+      
     const words = settings.siteName.split(' ');
+    let textHtml = '';
     if (words.length > 1) {
-      logoEl.innerHTML = `<span class="logo-accent">${words[0]}</span> ${words.slice(1).join(' ')}`;
+      textHtml = `<span class="logo-accent">${words[0]}</span> ${words.slice(1).join(' ')}`;
     } else {
-      logoEl.innerHTML = `<span class="logo-accent">${settings.siteName}</span>`;
+      textHtml = `<span class="logo-accent">${settings.siteName}</span>`;
     }
+    
+    if (logoEl) logoEl.innerHTML = logoImgHtml + textHtml;
+    if (footerLogoEl) footerLogoEl.innerHTML = logoImgHtml + textHtml;
   }
 }
 
