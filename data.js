@@ -108,15 +108,17 @@ const DataService = (() => {
   /* ─── Seed Default Data ─── */
 
   function seed(force = false) {
-    if (!force && _read('vs_seeded')) return;
+    const schemaVersion = localStorage.getItem('vs_schema_version');
+    if (!force && _read('vs_seeded') && schemaVersion === '4.0') return;
+    localStorage.setItem('vs_schema_version', '4.0');
 
     // Settings
     _write('vs_settings', {
       siteName: 'Venture Safaries',
-      logo: '',
+      logo: 'venture_safaris.jpg',
       adminEmail: 'admin@venturesafaries.com',
       adminPassword: 'admin123',
-      primaryColor: '#d4a853',
+      primaryColor: '#e2b755',
       socialLinks: {
         facebook: 'https://facebook.com/venturesafaries',
         instagram: 'https://instagram.com/venturesafaries',
@@ -128,12 +130,12 @@ const DataService = (() => {
     // Homepage
     _write('vs_homepage', {
       heroTitle: 'Discover the World\'s Most Breathtaking Destinations',
-      heroSubtitle: 'Luxury adventures crafted for the extraordinary traveler. Experience the untamed beauty of nature with Venture Safaries.',
+      heroSubtitle: 'Luxury adventures and customized tours crafted for the extraordinary traveler. Experience the untamed beauty of God\'s Own Country.',
       heroImage: 'https://images.unsplash.com/photo-1516426122078-c23e76b4f964?w=1920&q=80',
       ctaText: 'Explore Adventures',
-      aboutTitle: 'Your Journey, Our Passion',
-      aboutText: 'For over a decade, Venture Safaries has been crafting extraordinary travel experiences that blend luxury with authentic adventure. From the sweeping savannahs of Africa to the misty mountains of Southeast Asia, we transform dreams into unforgettable journeys. Our expert guides, hand-picked accommodations, and meticulously planned itineraries ensure every moment exceeds expectations.',
-      aboutImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
+      aboutTitle: 'Exquisite Kerala Journeys',
+      aboutText: 'Based in the heart of Kerala, Venture Safaries is a premium travel concern by A Friends Media Center. We specialize in crafting Tailored Trips, Group Tours, and Custom Packages that let you explore, experience, and enjoy the absolute pinnacle of God\'s Own Country.\n\nFrom the mist-draped hill stations of Munnar and lush wildlife sanctuaries of Thekkady, to the tranquil luxury houseboats gliding through Alappuzha\'s historic backwaters and palm-fringed coastlines of Varkala, we translate your travel dreams into deeply emotional, immersive, and luxurious realities. Our expert guides, hand-selected boutique properties, and pristine itineraries ensure every moment is crafted to perfection.',
+      aboutImage: 'kerala_backwaters.png',
       stats: [
         { label: 'Happy Travelers', value: '15,000+', icon: '🌍' },
         { label: 'Destinations', value: '120+', icon: '📍' },
@@ -142,10 +144,10 @@ const DataService = (() => {
       ],
       bannerImage: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80',
       bannerText: 'Ready for Your Next Adventure?',
-      footerText: 'Venture Safaries — Crafting extraordinary journeys since 2014.',
-      footerPhone: '+1 (555) 987-6543',
-      footerEmail: 'hello@venturesafaries.com',
-      footerAddress: '42 Explorer Avenue, Adventure City, AC 10001'
+      footerText: 'Tour Agency — ᴀ ꜰʀɪᴇɴᴅꜱ ᴍᴇᴅɪᴀ ᴄᴇɴᴛᴇʀ ᴄᴏɴᴄᴇʀɴ. Tailored Trips | Group Tours | Custom Packages. Explore.. Experience.. Enjoy.. 🌍',
+      footerPhone: '9495514128 | 6238118024',
+      footerEmail: 'DM or hello@venturesafaries.com',
+      footerAddress: 'Kerala, India'
     });
 
     // Packages
