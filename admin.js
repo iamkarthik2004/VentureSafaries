@@ -541,7 +541,7 @@ function loadPackagesList(query = '') {
       <td style="font-weight: 600; color: #ffffff;">${pkg.title}</td>
       <td>${pkg.destination}</td>
       <td>${pkg.duration}</td>
-      <td style="color: var(--admin-gold); font-weight: 600;">$${pkg.price.toLocaleString()}</td>
+      <td style="color: var(--admin-gold); font-weight: 600;">₹${pkg.price.toLocaleString()}</td>
       <td>
         <span class="badge ${(pkg.featured === true || pkg.featured === 'true') ? 'badge-confirmed' : 'badge-new'}">
           ${(pkg.featured === true || pkg.featured === 'true') ? 'Featured' : 'Standard'}
