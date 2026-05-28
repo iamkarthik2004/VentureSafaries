@@ -161,7 +161,7 @@ function renderAbout() {
     if (homepage.aboutImage) {
       aboutImg.src = homepage.aboutImage;
       aboutImg.onerror = () => {
-        aboutImg.src = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80';
+        aboutImg.src = 'kerala_backwaters.png';
       };
     }
 
@@ -244,7 +244,7 @@ function filterAndRenderPackages(filter, allPackages, container) {
   container.innerHTML = filtered.map(pkg => `
     <div class="card">
       <div class="card-img-wrapper">
-        <img src="${pkg.image}" alt="${pkg.title}" class="card-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516426122078-c23e76b4f964?w=600&q=80';">
+        <img src="${pkg.image}" alt="${pkg.title}" class="card-img" onerror="this.onerror=null; this.src='kerala_backwaters.png';">
         ${(pkg.featured === true || pkg.featured === 'true') ? `<span class="card-tag">Featured</span>` : ''}
       </div>
       <div class="card-body">
@@ -263,7 +263,7 @@ function filterAndRenderPackages(filter, allPackages, container) {
         <div class="card-footer">
           <div class="card-price">
             <span class="price-label">Price per person</span>
-            <span class="price-value">$${pkg.price.toLocaleString()}</span>
+            <span class="price-value">₹${pkg.price.toLocaleString()}</span>
           </div>
           <button class="btn btn-outline" onclick="openPackageDetails('${pkg.id}')" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">View Details</button>
         </div>
@@ -307,7 +307,7 @@ function renderDestinations() {
 
   grid.innerHTML = sorted.map(dest => `
     <div class="dest-card" onclick="openDestinationDetails('${dest.id}')">
-      <img src="${dest.image}" alt="${dest.name}" class="dest-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80';">
+      <img src="${dest.image}" alt="${dest.name}" class="dest-img" onerror="this.onerror=null; this.src='kerala_backwaters.png';">
       <div class="dest-overlay">
         <span class="dest-country">${dest.country}</span>
         <h3 class="dest-title">${dest.name}</h3>
@@ -373,7 +373,7 @@ function renderGallery() {
   const items = gallery.slice(0, 8);
   grid.innerHTML = items.map(item => `
     <div class="gallery-item">
-      <img src="${item.image}" alt="${item.caption}" class="gallery-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&q=80';">
+      <img src="${item.image}" alt="${item.caption}" class="gallery-img" onerror="this.onerror=null; this.src='kerala_backwaters.png';">
       <div class="gallery-hover">
         <span class="gallery-category">${item.category}</span>
         <h4 class="gallery-caption">${item.caption}</h4>
@@ -497,8 +497,8 @@ function initBookingForm() {
   const packages = DataService.getAll('vs_packages');
   select.innerHTML = `
     <option value="" disabled selected>Choose a package</option>
-    ${packages.map(p => `<option value="${p.title}">${p.title} ($${p.price.toLocaleString()})</option>`).join('')}
-    <option value="Custom Luxury Itinerary">Bespoke Custom Excursion (Create for me)</option>
+    ${packages.map(p => `<option value="${p.title}">${p.title} (₹${p.price.toLocaleString()})</option>`).join('')}
+    <option value="Custom Group Bus Tour">Custom Group Bus Tour (Create for us)</option>
   `;
 
   // Handle Form Submission
@@ -618,7 +618,7 @@ window.openPackageDetails = function(packageId) {
     </div>
     <div class="modal-meta-item">
       <span>Excursion Cost</span>
-      <strong style="color: var(--accent-gold);">$${pkg.price.toLocaleString()}</strong>
+      <strong style="color: var(--accent-gold);">₹${pkg.price.toLocaleString()}</strong>
     </div>
     <div class="modal-meta-item">
       <span>Highlights</span>
@@ -660,7 +660,7 @@ window.openPackageDetails = function(packageId) {
   const photosGrid = document.getElementById('modal-photos-grid');
   const allPhotos = [pkg.image, ...(pkg.gallery || [])];
   photosGrid.innerHTML = allPhotos.map(photo => `
-    <img src="${photo}" alt="Tour Detail Thumbnail" class="modal-gallery-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&q=80';">
+    <img src="${photo}" alt="Tour Detail Thumbnail" class="modal-gallery-img" onerror="this.onerror=null; this.src='kerala_backwaters.png';">
   `).join('');
 
   // Update Booking Selector pre-fill on Enquiry CTA
@@ -742,7 +742,7 @@ window.openDestinationDetails = function(destId) {
   const photosGrid = document.getElementById('modal-photos-grid');
   const allPhotos = [dest.image, ...(dest.gallery || [])];
   photosGrid.innerHTML = allPhotos.map(photo => `
-    <img src="${photo}" alt="Dest Detail Thumbnail" class="modal-gallery-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&q=80';">
+    <img src="${photo}" alt="Dest Detail Thumbnail" class="modal-gallery-img" onerror="this.onerror=null; this.src='kerala_backwaters.png';">
   `).join('');
 
   // Update Booking Selector to custom
